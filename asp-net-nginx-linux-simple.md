@@ -40,7 +40,7 @@ ENTRYPOINT ["dotnet", "AngielskiAnkieta.dll"]
 
 ![image](https://user-images.githubusercontent.com/54003204/201541526-73e48979-d590-4f9e-a154-895013225b1c.png)
 
-### Nginx server
+### Nginx server (reverse proxy)
 11. Go to filder `cd ~/docker/nginx`
 12. Create files `touch Dockerfile` and `touch nginx.conf`
 13. Edit nginx.conf `nano nginx.conf` and insert:
