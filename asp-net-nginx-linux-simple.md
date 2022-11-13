@@ -95,3 +95,23 @@ COPY nginx.conf /etc/nginx/nginx.conf
 ![image](https://user-images.githubusercontent.com/54003204/201541797-d7e00618-87cb-4be9-9aaa-2f39517efa21.png)
 
 
+## Docker composer
+1. Go to folder `cd ~/docker/`
+2. Create file `touch docker-compose.yml`
+3. Edit file `nano docker-compose.yml`:
+
+```
+services:
+    asptest:
+        image: asptest
+        ports:
+            - 80:80
+        restart: always
+ 
+    nginx:
+        depends_on:
+            - asptest
+        image: nginx-test
+        restart: always
+```
+4.  Start up your application by running `sudo docker compose up`
