@@ -104,14 +104,14 @@ COPY nginx.conf /etc/nginx/nginx.conf
 services:
     asptest:
         image: asptest
-        ports:
-            - 80:80
         restart: always
  
     nginx:
         depends_on:
             - asptest
         image: nginx-test
+	ports:
+            - 80:80
         restart: always
 ```
 4.  Start up your application by running `sudo docker compose up`
