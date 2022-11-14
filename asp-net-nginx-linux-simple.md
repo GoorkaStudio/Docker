@@ -103,6 +103,7 @@ COPY nginx.conf /etc/nginx/nginx.conf
 ```
 services:
     asptest:
+    	container_name: asptest
         image: asptest
         restart: always
  
